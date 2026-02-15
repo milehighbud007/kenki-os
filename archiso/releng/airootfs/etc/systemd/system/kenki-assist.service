@@ -1,0 +1,11 @@
+[Unit]
+Description=KENKI AI Assistant
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /etc/kenki/ai-assist/kenki_assist.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

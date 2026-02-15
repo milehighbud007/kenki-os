@@ -1,0 +1,55 @@
+{
+  "anthropic_api_key": "",
+  "openai_api_key": "",
+  "local_llm": {
+    "enabled": false,
+    "model_path": "models/mistral.gguf",
+    "endpoint": "http://localhost:11434"
+  },
+  "preferences": {
+    "default_model": "claude",
+    "max_tokens": 1000,
+    "temperature": 0.7
+  },
+  "security": {
+    "command_validation": true,
+    "dangerous_patterns": [
+      "rm -rf /",
+      "dd if=/dev/zero",
+      "chmod 777 /",
+      "chown root /"
+    ],
+    "require_authorization": true
+  },
+  "tools": {
+    "nmap": {
+      "default_scan": "nmap -sS -p 80,443,22,21,23,25,53",
+      "stealth_scan": "nmap -sS -T2 -p 80,443,22",
+      "comprehensive_scan": "nmap -sS -sV -O -p-"
+    },
+    "nikto": {
+      "default_scan": "nikto -h",
+      "comprehensive_scan": "nikto -h -C all"
+    },
+    "dirb": {
+      "default_scan": "dirb http://",
+      "wordlist": "/usr/share/dirb/wordlists/common.txt"
+    },
+    "sqlmap": {
+      "default_scan": "sqlmap -u",
+      "batch_mode": "sqlmap -u --batch"
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "kenki_assistant.log",
+    "max_size": "10MB",
+    "backup_count": 5
+  },
+  "ui": {
+    "theme": "dark",
+    "show_banner": true,
+    "interactive_mode": true,
+    "color_output": true
+  }
+} 

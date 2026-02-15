@@ -13,7 +13,17 @@ bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito' 'uefi-x64.systemd-boot.e
 arch="x86_64"
 pacman_conf="pacman.conf"
 
+# No script_path variable — removed to prevent build failure
+# All paths are relative to the profile directory
+
 file_permissions=(
   ["/etc/shadow"]="0:0:400"
   ["/etc/gshadow"]="0:0:400"
+)
+
+ai_overlay="ai-overlay"
+
+# Add AI overlay into airootfs
+file_permissions+=(
+  ["/${ai_overlay}"]="0:0:755"
 )

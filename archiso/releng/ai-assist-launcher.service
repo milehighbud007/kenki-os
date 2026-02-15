@@ -1,11 +1,14 @@
 [Unit]
-Description=KENKI AI Assistant Launcher
+Description=KENKI OS AI Assistant Launcher
 After=network.target
 
 [Service]
 Type=simple
+User=%i
+WorkingDirectory=%h/.kenki
 ExecStart=/usr/bin/python3 /etc/kenki/ai-assist/kenki_assist.py --interactive
-Restart=on-failure
+Restart=always
+RestartSec=10
 
 [Install]
-WantedBy=default.target 
+WantedBy=default.target
