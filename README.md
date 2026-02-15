@@ -1,5 +1,10 @@
 # 🧠 KENKI OS - AI-Enhanced Security Platform
 
+Maintained: Jackie-DeVere Allen Cole aka DevPen187
+VP Architecture 
+PinkHat Security Enterprise, Inc
+1-719-421-6200
+
 **KENKI OS (TrAEL AI Edition)** is a cutting-edge, AI-augmented Linux distribution built on top of BlackArch, designed for ethical hackers, cybersecurity researchers, and developers who want to supercharge their workflow with powerful AI-assisted terminal tools. It combines the firepower of 2,800+ BlackArch tools with an integrated AI assistant terminal.
 
 ![KENKI OS Banner](https://img.shields.io/badge/KENKI-OS-purple?style=for-the-badge&logo=linux)
