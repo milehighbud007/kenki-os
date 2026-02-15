@@ -70,3 +70,9 @@ models/
 # Backup files
 *.backup
 *.bak 
+
+work/
+out/
+*.iso
+*.img
+*.log
